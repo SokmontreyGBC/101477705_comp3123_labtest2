@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { WeatherData, ForecastData } from '../types';
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather';
+const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 export const fetchWeatherData = async (city: string): Promise<WeatherData> => {
     try {
@@ -19,7 +19,7 @@ export const fetchWeatherData = async (city: string): Promise<WeatherData> => {
     }
 };
 
-const FORECAST_URL = 'http://api.openweathermap.org/data/2.5/forecast';
+const FORECAST_URL = 'https://api.openweathermap.org/data/2.5/forecast';
 
 export const fetchWeatherForecast = async (city: string): Promise<ForecastData> => {
     try {

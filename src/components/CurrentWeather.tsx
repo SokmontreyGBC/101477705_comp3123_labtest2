@@ -27,7 +27,7 @@ export default function CurrentWeather({ weatherData }: CurrentWeatherProps) {
     const temperatureCelsius = Math.round(main.temp - 273.15);
     const weatherDescription = weather[0]?.description;
     const iconCode = weather[0]?.icon;
-    const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@4x.png`; // Larger icon
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`; // Larger icon
 
     return (
         <div

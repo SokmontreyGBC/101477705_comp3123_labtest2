@@ -20,7 +20,7 @@ export default function ForecastList({ forecast }: ForecastListProps) {
                             {new Date(day.dt * 1000).toLocaleDateString(undefined, { weekday: 'short' })}
                         </span>
                         <img
-                            src={`http://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
+                            src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
                             alt={day.weather[0].description}
                             className="w-10 h-10 mb-2"
                         />
