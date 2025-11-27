@@ -49,3 +49,27 @@ export const fetchWeatherForecast = async (city: string): Promise<ForecastData> 
         throw error;
     }
 };
+
+export const fetchCityImage = async (city: string): Promise<string | null> => {
+    console.log(`fetchCityImage called for city: ${city}`);
+    const apiKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
+    console.log(`Unsplash API Key present: ${!!apiKey}`);
+
+    try {
+        const response = await axios.get('https://api.unsplash.com/search/photos', {
+            params: {
+                query: city,
+                client_id: apiKey,
+                per_page: 1,
+            },
+        });
+        console.log("Unsplash response:", response.status);
+        if (response.data.results && response.data.results.length > 0) {
+            return response.data.results[0].urls.regular;
+        }
+        return null;
+    } catch (error) {
+        console.error("Error fetching city image:", error);
+        return null;
+    }
+};
