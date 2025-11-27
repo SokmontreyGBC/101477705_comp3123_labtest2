@@ -1,4 +1,4 @@
-import type { WeatherData } from './WeatherCard';
+import type { WeatherData } from '../types';
 
 interface WeatherHighlightsProps {
     weatherData: WeatherData | null;

@@ -4,8 +4,8 @@ import SearchBar from "@/components/SearchBar";
 import CurrentWeather from "@/components/CurrentWeather";
 import WeatherHighlights from "@/components/WeatherHighlights";
 import ForecastList from "@/components/ForecastList";
-import { fetchWeatherData, fetchWeatherForecast, type ForecastData } from "@/services/weatherService";
-import type { WeatherData } from "@/components/WeatherCard"; // Keep type import or move it
+import { fetchWeatherData, fetchWeatherForecast } from "@/services/weatherService";
+import type { WeatherData, ForecastData } from "@/types";
 
 function App() {
   const [weather, setWeather] = useState<WeatherData | null>(null);

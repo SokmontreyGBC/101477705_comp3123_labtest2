@@ -1,4 +1,4 @@
-import type { ForecastData } from '../services/weatherService';
+import type { ForecastData } from '../types';
 
 interface ForecastListProps {
     forecast: ForecastData | null;

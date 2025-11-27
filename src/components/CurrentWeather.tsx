@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { fetchCityImage } from '../services/weatherService';
-import type { WeatherData } from './WeatherCard';
+import type { WeatherData } from '../types';
 
 interface CurrentWeatherProps {
     weatherData: WeatherData | null;
